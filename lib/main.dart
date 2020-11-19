@@ -1,3 +1,4 @@
+import 'package:expenses/components/transaction_form.dart';
 import 'package:flutter/material.dart';
 import 'package:expenses/components/transaction_user.dart';
 
@@ -15,13 +16,26 @@ class ExpensesApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
 
-
+_openTransactionFormModal(BuildContext context){
+  showModalBottomSheet(
+    context: context,
+    builder: (_){
+      return TransactionForm(null);
+    }
+  );
+}
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Despesas Pessoais'),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.add),
+              onPressed: (){},
+              ),
+        ],
       ),
       body:SingleChildScrollView(
         child: Column(
@@ -40,6 +54,11 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {},
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
