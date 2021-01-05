@@ -2,6 +2,8 @@
 
 A new Flutter application.
 
+![home](https://github.com/Matheus-Tankian/expenses/blob/main/videos/2021_01_04_22_17_15.gif)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
